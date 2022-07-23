@@ -41,8 +41,8 @@ def resize_image(img):
     im_scale = float(600) / float(im_size_min)
     if np.round(im_scale * im_size_max) > 1200:
         im_scale = float(1200) / float(im_size_max)
-    new_h = int(img_size[0])
-    new_w = int(img_size[1])
+    new_h = int(img_size[0]*1)
+    new_w = int(img_size[1]*1)
 
     new_h = new_h if new_h // 16 == 0 else (new_h // 16 + 1) * 16
     new_w = new_w if new_w // 16 == 0 else (new_w // 16 + 1) * 16
